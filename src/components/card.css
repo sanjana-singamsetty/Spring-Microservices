@@ -1,0 +1,45 @@
+.dark-card {
+  background-color: #3287bd;
+  color: #fcf8f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+  transition: transform 0.2s;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  margin-left: 240px;
+}
+
+.sid-container-1 {
+  background-color: #f5f3ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.dark-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #a0a0c0;
+  margin-bottom: 0.75rem;
+}
+
+.card-content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

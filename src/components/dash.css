@@ -1,0 +1,8 @@
+.section {
+  background-color: #f5f3ff;
+  /* Light Lavender */
+}
+.card-grid {
+  /* display: flex; */
+  display: flex;
+}
