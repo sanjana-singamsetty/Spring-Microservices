@@ -1,71 +1,71 @@
-export const Data = [
+export const FullstackeData = [
   {
-    title: "Monolithic Architecture",
-    subtitle: "Monolithic Architecture understanding",
-    filepath: "/microservices/Monolithic.md",
+    title: "Scenerio Based Problems",
+    subtitle: "based on scenerio solve each topic",
+    filepath: "/Finance/app.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: " Service oriented Architecture",
-    subtitle: "soaa???",
-    filepath: "/microservices/soa.md",
+    title: "Scenerio Based system design",
+    subtitle: "based on scenerio solve each topic",
+    filepath: "/fullstack/datadog.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "MicroServices",
-    subtitle: "Microservices???",
-    filepath: "/microservices/MicroSerice.md",
+    title: "Plan Overall",
+    subtitle: "all scenerios implemented as one ",
+    filepath: "/fullstack/planoa.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "Cmporasion and when",
-    subtitle: "Micro,SOA,MONO???",
-    filepath: "/microservices/when.md",
+    title: "API -TESTING ",
+    subtitle: "P95,P99",
+    filepath: "/fullstack/apitesting.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "Microservice-Communication",
-    subtitle: "inter process communication???",
-    filepath: "/microservices/Microservice-commun.md",
+    title: "redis",
+    subtitle: "redis kya hai",
+    filepath: "/fullstack/redis.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "Building MicroService",
-    subtitle: "How to build a Microservice???",
-    filepath: "/microservices/Building-Ms.md",
+    title: "Essential design concepts ",
+    subtitle: "CDN,PUB SUB  kya hai",
+    filepath: "/fullstack/design.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "Spring Refresher",
-    subtitle: "Bean,Autowiring???",
-    filepath: "/microservices/Sref.md",
+    title: "Redis- backend ",
+    subtitle: "using redis in an app",
+    filepath: "/fullstack/redis-ba.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "WAR and EAR ",
-    subtitle: "War and ear files ???",
-    filepath: "/microservices/EARWAR.md",
+    title: "HTML Overview",
+    subtitle: "Hyper Text Markup Lnaguage",
+    filepath: "/fullstack/html.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "Microservices REST services  ",
-    subtitle: "standards and details ???",
-    filepath: "/microservices/Rest.md",
+    title: "Document in webrowser",
+    subtitle: "Document",
+    filepath: "/fullstack/document.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },
   {
-    title: "DTO  ",
-    subtitle: "Data Transfer Object ???",
-    filepath: "/microservices/DTO.md",
+    title: "Javascript",
+    subtitle: "ALL JS",
+    filepath: "/fullstack/js.md",
     content:
       "Before starting with the Spring Framework, you should have a good understanding of Java, object-oriented programming concepts, and basic knowledge of web technologies such as HTML and HTTP.",
   },

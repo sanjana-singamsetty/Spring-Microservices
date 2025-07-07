@@ -1,254 +1,238 @@
-combine **Microservices**, **Spring Boot**, **React**, **AI/ML**, **Kubernetes**, and **Jenkins** into an **interesting real-world project** that’s not only technically impressive but also **practically useful** and **resume-worthy**.
+Here’s the **updated full MVP idea** for your app with the added **Posts feature** and **Currency Conversion** — all built with **Spring Boot (Backend)** and **React + shadcn/ui (Frontend)**.
 
 ---
 
-# 🤖📈 **Smart Career Counselor Platform (AI + Microservices + React + DevOps)**
+# 💸 App Name: **BillBoard**
 
-### 🔍 **Problem Statement:**
-
-People are confused about career choices. Based on a user’s skills, interests, and personality (via a form + resume), the system suggests suitable career paths using **AI/ML**, lets mentors post content, and allows users to ask questions in a forum.
+> _Simplify shared expenses. Stay connected._
 
 ---
 
-## 🧠 Features Summary
+## 🔥 Updated MVP Overview
 
-| User Feature                       | Tech                    | Microservice   |
-| ---------------------------------- | ----------------------- | -------------- |
-| Personality test (MBTI-style quiz) | React + ML model        | AI Service     |
-| Resume upload + parsing            | Python + NLP            | AI Service     |
-| Career recommendation              | ML (sklearn, NLP)       | AI Service     |
-| Register/login (JWT)               | React + Spring Security | Auth Service   |
-| Browse career paths                | React + REST            | Career Service |
-| Forums to post questions/discuss   | React + REST            | Forum Service  |
-| Mentors post tips/resources        | React + REST            | Mentor Service |
-| Admin can manage all content       | React + Admin Panel     | Admin Service  |
+### 🎯 What is SplitSocial?
+
+**SplitSocial** is a modern group expense manager for roommates, travel buddies, and event organizers — with an added **global posts board** for updates, tips, and communication.
+It supports **multi-currency expense logging** and real-time currency conversion.
 
 ---
 
-## 🔧 Tech Stack
+## ✨ Core Features
 
-| Layer            | Tech Choices                                                   |
-| ---------------- | -------------------------------------------------------------- |
-| Frontend         | React + TypeScript + Shadcn/ui                                 |
-| Backend          | Spring Boot Microservices (Auth, Career, Forum, Mentor, Admin) |
-| AI Service       | Flask/FastAPI (Python) with sklearn or transformers            |
-| Gateway          | Spring Cloud Gateway                                           |
-| Service Registry | Eureka                                                         |
-| Config Server    | Spring Cloud Config                                            |
-| DB               | PostgreSQL (or MongoDB for forum), Redis (optional)            |
-| AI/ML Model      | Career Prediction: Logistic Regression, Random Forest, or BERT |
-| Deployment       | Docker + Kubernetes (YAML files for each service)              |
-| CI/CD            | Jenkins (build-test-dockerize-deploy to K8s)                   |
+### 1. 🔗 Group Expense Management
 
----
+- Create & manage groups (e.g., "Europe Trip", "Roommates")
+- Add members to groups
+- Add expenses with:
 
-## 🎯 AI Features (Inside AI-Service)
+  - Description
+  - Amount
+  - Paid by
+  - Participants involved
+  - **Currency selection** (e.g., USD, INR, EUR)
 
-| Feature                  | Tech                                |
-| ------------------------ | ----------------------------------- |
-| Personality Quiz Scoring | Pre-trained MBTI classifier (NLP)   |
-| Resume Parsing           | `spacy` or `pyresparser`            |
-| Career Recommendation    | Trained ML model (based on dataset) |
-| Resume Score (optional)  | ML scoring model                    |
+- Automatically **convert to base currency (e.g., USD)**
+- View balance sheet for each group
+- View **simplified settle-up suggestions**
 
 ---
 
-## 🔁 Microservices Breakdown
+### 2. 📣 Public Posts (Billboard)
 
-| Service            | Endpoints                                   |
-| ------------------ | ------------------------------------------- |
-| Auth Service       | `/register`, `/login`, `/profile`           |
-| Career Service     | `/careers`, `/suggested-careers`            |
-| Forum Service      | `/forums`, `/forums/{id}`                   |
-| Mentor Service     | `/mentors`, `/resources`                    |
-| Admin Service      | `/admin/users`, `/admin/content`            |
-| AI Service (Flask) | `/predict-career`, `/parse-resume`, `/mbti` |
+- Anyone can create a post visible to all users
+- Use it for: trip updates, expense tips, reminders, fun polls, etc.
+- View global post feed in a separate tab
 
 ---
 
-## ⚙️ Jenkins + Docker + K8s Flow
+### 3. 💱 Currency Conversion
 
-1. Jenkins:
-
-   - Pulls from GitHub
-   - Runs tests
-   - Builds Docker images
-   - Pushes to DockerHub
-   - Applies K8s manifests (`kubectl apply -f k8s/`)
-
-2. Kubernetes:
-
-   - All microservices run as separate deployments
-   - Flask AI service exposed to Gateway via internal service
-   - React served via NGINX deployment
+- Select currency while logging an expense
+- Real-time conversion using a currency API (e.g., [Frankfurter](https://www.frankfurter.app))
+- Store both original and converted amounts
+- Display both in group summaries
 
 ---
 
-## 💡 Why It’s a Great Project
+### 4. 🧑‍💼 User Accounts
 
-✅ Covers **React, Spring Boot, AI/ML, DevOps, Kubernetes**
-✅ Solves a **real-world problem**
-✅ Shows full-stack + data + DevOps skills
-✅ **Customizable** for hackathons, resumes, or product building
-✅ Demonstrates integration of **AI into Microservices**
+- Sign up / Log in
+- See your groups and your posts
+- Optionally: profile page showing your balances & history
 
 ---
 
-## ⏳ Suggested Timeline (4–6 weeks)
+## 📱 Pages (Frontend)
 
-| Week | Focus                                  |
-| ---- | -------------------------------------- |
-| 1    | Setup Auth Service + Frontend auth     |
-| 2    | Build AI service (quiz + career model) |
-| 3    | Create Career & Forum Services         |
-| 4    | Mentor & Admin features                |
-| 5    | Dockerize all services + local testing |
-| 6    | Setup Jenkins + Deploy to Kubernetes   |
+1. **Login / Signup**
+2. **Groups Page**
 
----
+   - List of all your groups
+   - Create new group
+   - Click into group → view members, expenses, balances, settle-up tab
 
----
+3. **Group Detail Page**
 
-## 💡 Updated Project: AI Career & Personality Assistant
+   - Tabs: Members | Expenses | Settle Up
 
-### 🌟 Key Features:
+4. **Add Expense Modal**
 
-| Module         | Tech Stack                           | Purpose                               |
-| -------------- | ------------------------------------ | ------------------------------------- |
-| Auth Service   | Spring Boot + JWT + PostgreSQL       | Login/Register with JWT               |
-| Career Service | Spring Boot                          | Career suggestions                    |
-| AI Service     | Python Flask + ML (spaCy/sklearn)    | Resume parsing, MBTI quiz, prediction |
-| Forum Service  | Spring Boot                          | Peer discussions                      |
-| Mentor Service | Spring Boot                          | Show mentors/resources                |
-| Frontend       | React + TypeScript + Tailwind/shadcn | User interface                        |
-| Gateway        | Spring Cloud Gateway                 | Central API routing                   |
-| Config Server  | Spring Cloud Config                  | Central config                        |
-| Registry       | Eureka                               | Service discovery                     |
-| Monitoring     | Prometheus + Grafana                 | Visualize metrics                     |
-| DevOps         | Docker, Kubernetes, Jenkins          | CI/CD, orchestration                  |
+   - Add description, amount, paid by, currency, and participants
+
+5. **Posts Page**
+
+   - Global feed
+   - Create new post
+
+6. **Profile Page (optional)**
 
 ---
 
-## 🧱 Final Project Architecture
+## 🧰 Tech Stack
 
-```
-                         ┌──────────────────┐
-                         │    React Frontend│
-                         └────────▲─────────┘
-                                  │
-                          ┌───────┴────────┐
-                          │ Spring Gateway │
-                          └───────▲────────┘
-                                  │
- ┌──────────────┬────────────────┴──────────────┐
- │              │                │              │
- ▼              ▼                ▼              ▼
-Auth Svc   Career Svc       Forum Svc      Mentor Svc   ← all are Spring Boot
-                                 │
-                                 ▼
-                         Flask AI Microservice  ← Python ML (MBTI, Resume, Predictions)
+### 🔙 Backend (Spring Boot)
 
- ┌────────────────────────────────────────────────────────┐
- │                 Eureka + Config Server                 │
- └────────────────────────────────────────────────────────┘
+- Spring Web (REST API)
+- Spring Security (JWT auth)
+- JPA + MySQL/PostgreSQL
+- Currency Conversion API integration
+- Models: `User`, `Group`, `Expense`, `Post`, `MemberBalance`
 
- ┌────────────────────────────────────────────────────────┐
- │               Prometheus ← collects metrics            │
- └────────────────────────────────────────────────────────┘
-                          │
-                          ▼
-                Grafana ← visualizes metrics
+### 🔜 Frontend (React + shadcn/ui + Tailwind)
 
-      Jenkins → Docker → Kubernetes (minikube/cloud)
-
-```
+- Routing (React Router)
+- Pages: Groups, Group Details, Posts, Auth
+- shadcn/ui modals, inputs, tabs, tables
+- Axios for API calls
 
 ---
 
-## ✅ Project Milestones Summary
+## 📦 Future Ideas (After MVP)
 
-| Phase | Feature                               | Tools                   |
-| ----- | ------------------------------------- | ----------------------- |
-| 1     | Auth + Gateway                        | Spring Boot, JWT        |
-| 2     | Basic React Frontend                  | React + Tailwind        |
-| 3     | Flask AI Microservice                 | Flask + sklearn         |
-| 4     | Microservices for Forum/Career/Mentor | Spring Boot             |
-| 5     | Docker + Kubernetes                   | Minikube                |
-| 6     | Jenkins CI/CD Pipeline                | Jenkins + Docker        |
-| 7     | Monitoring & Metrics                  | Prometheus + Grafana ✅ |
+- Notifications (who added an expense / posted)
+- Export to PDF or Excel
+- Comments on posts
+- Private group chats
 
 ---
 
-Here’s a **clear and actionable project build roadmap** for your full-stack **AI + Microservices + DevOps** project, with **step-by-step phases**. This includes Spring Boot, React, Flask (AI), Docker, Kubernetes, Jenkins, Prometheus, and Grafana.
+Here’s a **User Experience (UX) flow** for your updated **SplitSocial** app. It walks through how a typical user would interact with the app — from logging in to managing group expenses and reading public posts.
 
 ---
 
-## 🗂️ Full Project Development Plan — Table Format
-
-| Phase | Focus Area            | What You’ll Build / Set Up                                                                                  | Technologies                     | Outcome                                                               |
-| ----- | --------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
-| 1     | 🔧 Project Setup      | Create folder structure, Git repo, setup basic documentation, choose ports, API contracts, DB schema        | Git, GitHub, Postman             | Ready workspace with agreed endpoints and services                    |
-| 2     | ⚙️ Auth Service       | JWT-based login/signup API with Spring Boot + PostgreSQL, and expose `/actuator/prometheus`                 | Spring Boot, PostgreSQL, JWT     | Working auth service + Prometheus metrics exposed                     |
-| 3     | 🌐 Gateway + Config   | Setup Spring Cloud Gateway, Spring Config Server, and Eureka for service discovery and routing              | Spring Cloud Gateway, Eureka     | Proper routing for all future microservices                           |
-| 4     | 🧠 AI Service         | Flask microservice that parses resumes, detects MBTI, and suggests careers. Add Prometheus metric tracking  | Flask, Python, sklearn, spaCy    | Working Python ML API exposed with metrics                            |
-| 5     | 🎯 Core Services      | Spring Boot-based services: Career, Forum, Mentor — each with separate endpoints and Prometheus integration | Spring Boot                      | Core business logic separated into scalable services                  |
-| 6     | 🎨 Frontend           | React + Tailwind UI. Login, Dashboard (career suggestions, mentor list, forum), connect to backend APIs     | React, TypeScript, Tailwind      | Functional front-end, JWT-authenticated, fully wired UI               |
-| 7     | 📦 Dockerization      | Add Dockerfiles for each service + Flask, docker-compose to run all locally                                 | Docker, Docker Compose           | Locally running containerized services                                |
-| 8     | ☸️ Kubernetes         | Convert services into K8s Deployments, add Services, Ingress, ConfigMap, Secrets. Use Minikube for testing. | Kubernetes, Minikube             | Locally running Kubernetes cluster with all services and gateway      |
-| 9     | 🔁 CI/CD with Jenkins | Create a Jenkinsfile to automate build, test, Dockerize, and deploy to Kubernetes                           | Jenkins, Docker, K8s             | Auto deployment pipeline working via Jenkins                          |
-| 10    | 📈 Monitoring         | Set up Prometheus to scrape all metrics and Grafana dashboards for system overview                          | Prometheus, Grafana              | Real-time system monitoring and alerting dashboards                   |
-| 11    | 🧪 Final Integration  | Full system integration: React → Gateway → Microservices → AI + Database + Monitoring                       | All stack                        | Final end-to-end working AI assistant product                         |
-| 12    | 🚀 Polish + Demo      | Improve UI/UX, handle errors, add tests, and document usage. Deploy online or demo with local setup.        | Docs, Tests, GitHub Pages/Fly.io | Ready-to-show professional project with DevOps, AI, and microservices |
+# 🌟 SplitSocial – User Experience Flow
 
 ---
 
-## 🔄 Suggested Build Order
+## 👋 1. First-Time User – Getting Started
 
-### ✅ Always Start with:
+### ✅ Step 1: Signup/Login
 
-1. **Backend first**: Auth → Gateway → AI → Services
-2. **Then Frontend**: So you have real APIs to connect
-3. **Then DevOps**: Docker → Kubernetes → Jenkins → Monitoring
-
----
-
-## 🧱 Folder Structure Suggestion
-
-```
-/ai-career-assistant
-│
-├── backend/
-│   ├── auth-service/
-│   ├── career-service/
-│   ├── forum-service/
-│   ├── mentor-service/
-│   ├── gateway-service/
-│   ├── config-server/
-│   ├── eureka-server/
-│   └── flask-ai-service/
-│
-├── frontend/
-│   └── react-app/
-│
-├── devops/
-│   ├── docker-compose.yml
-│   ├── k8s/
-│   ├── jenkins/
-│   ├── prometheus/
-│   └── grafana/
-│
-└── README.md
-```
+- **User opens SplitSocial**
+- Lands on a clean **login/signup screen**
+- Signs up with email + password
+- Redirected to **Groups Dashboard**
 
 ---
 
-## ⏱️ Estimated Timeline (Flexible)
+## 👥 2. Create or Join a Group
 
-| Phase Range | Time Estimate |
-| ----------- | ------------- |
-| Phase 1–4   | Week 1–2      |
-| Phase 5–6   | Week 3        |
-| Phase 7–9   | Week 4–5      |
-| Phase 10–12 | Week 6        |
+### 🧑‍🤝‍🧑 Groups Page
+
+- Sees a **"No Groups Yet"** message if new
+- Clicks **➕ "Create New Group"**
+- Enters group name: "Europe Trip"
+- Adds friends via email or username (invites them)
+- Group is now live!
+
+💡 _Group tile appears in sidebar: “Europe Trip (3 members)”_
 
 ---
+
+## 💸 3. Add First Expense
+
+### In Group > Expenses Tab
+
+- Clicks **➕ "Add Expense"**
+- Enters:
+
+  - Title: “Dinner in Paris”
+  - Amount: 80
+  - Currency: **EUR**
+  - Paid by: Alice
+  - Split between: Alice, Bob, Raj
+
+- App converts €80 → \~\$86 USD
+- Saves the expense
+
+💬 _Flash message: “Expense added successfully!”_
+
+---
+
+## 🔄 4. See Balances & Settle Up
+
+### Group > Settle Up Tab
+
+- Sees auto-generated summary:
+
+  - “Raj owes Alice \$28”
+  - “Bob owes Alice \$28”
+
+- Clicks “Mark as Settled” when paid in real life
+
+---
+
+## 📣 5. Post on Global Billboard
+
+### Posts Page
+
+- Navigates to **"Billboard" tab**
+- Sees posts from other users:
+
+  - “Hey, anyone used EUR in Amsterdam lately?”
+  - “Pro tip: Always save receipts 📜”
+
+- Clicks **➕ "New Post"**
+
+  - Writes: “SplitSocial is awesome!” and posts
+
+---
+
+## 💼 6. Profile Page (optional)
+
+### View Personal Summary
+
+- Sees:
+
+  - All joined groups
+  - Posts written
+  - Current debts and credits
+  - Settle-up history
+
+---
+
+## 🌐 7. Bonus: Multi-Currency Awareness
+
+- Every expense shows both:
+
+  - Original Currency (e.g., €80)
+  - Converted USD (\~\$86)
+
+- Group summaries are standardized in **USD**
+- Helps with mixed currency groups
+
+---
+
+# 💡 UX Highlights
+
+| Feature                | UX Goal                                      |
+| ---------------------- | -------------------------------------------- |
+| Intuitive Group System | Easy to manage and view multiple groups      |
+| Expense Simplicity     | Quick add with auto-currency conversion      |
+| Posts Page             | Social layer to feel connected and informed  |
+| Clean Balances         | See who owes who in 1 click                  |
+| Feedback Everywhere    | Snackbars, toasts, and tooltips for guidance |
+
+---
+
+Want a **UX wireframe** or **component breakdown** next? I can mock the full flow using React + shadcn/ui.

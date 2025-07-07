@@ -9,19 +9,20 @@ const Sidebar: React.FC = () => {
   const menuItems = [
     "Dashboard",
     "Microservices",
+    "Fullstack",
     "pdf-allinone",
-    "Spring",
-    "Spring-Boot",
-    "Architecture",
+    "BootCamp",
+
+    // "Architecture",
   ];
   const menuRoutes = React.useMemo(
     () => [
       "/", // Dashboard
-      "/micro", // Microservices
+      "/micro",
+      "/fullstack", // Microservices
       "/document",
-      "/spring", // Spring
-      "/spring-boot", // Spring-Boot
-      "/architecture",
+      "/finance", // Spring // Spring-Boot
+      // "/architecture",
     ],
     []
   );
